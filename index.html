@@ -93,39 +93,8 @@
 
     <p>Hint: "pwd" will tell you where you are, "dir" will let you know what's in your directory, and cd will take you to the next directory.</p>
     
-    var files = [];
-    <!-- Where terminal begins -->
-    <div class="terminalJ">
-      <script class="termScript">
-        $('body').terminal({
-            hello: function(what) {
-                this.echo('Hello, ' + what +
-                          '. Welcome to this terminal.');
-            }
-            ,ls: function(){
-                this.echo('myFile.txt' + files);
-            }
-            ,pwd: function(){
-                this.echo('/Users/Documents');
-            }
-            ,touch: function(file){
-                this.echo('myFile.txt ' + file + files);
-            }
-            ,
-        }, {
-            greetings: 'Try out the terminal!'
-        });
-      </script>
-    </div>
-
-    <!-- Load React. -->
-    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-
-    <!-- Load our React component. -->
-    <script src="textinput.js"></script>
-
-
+    <div id="terminal"></div>
+    
+    <script src="script.js"></script>
   </body>
 </html>
